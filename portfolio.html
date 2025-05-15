@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohamed Nowfal | Cybersecurity Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #333;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    a {
+      color: #1d3557;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      color: #457b9d;
+      text-decoration: underline;
+    }
+
+    header {
+      background-color: #0d1b2a;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      animation: bounceIn 1s ease forwards;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      opacity: 0;
+      animation: fadeSlideIn 1.5s ease forwards;
+      animation-delay: 0.4s;
+      animation-fill-mode: forwards;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #0d1b2a;
+      border-bottom: 3px solid #457b9d;
+      padding-bottom: 8px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      position: relative;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 1.05em;
+    }
+
+    .project,
+    .certification {
+      background: white;
+      padding: 25px 30px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover,
+    .certification:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+    }
+    .project h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #1d3557;
+      font-weight: 700;
+      font-size: 1.4em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0d1b2a;
+      color: white;
+      font-weight: 500;
+      font-size: 0.9em;
+      letter-spacing: 0.8px;
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mohamed Nowfal</h1>
+    <p>Cybersecurity Enthusiast | Python | SOC </p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p>Enthusiastic Engineering graduate with a strong interest in technology and problem-solving. Completed an academic project on an Enhanced Security Operations Center (SOC), demonstrating adaptability, analytical thinking, and a proactive approach to learning.</p>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>Networking Concepts</li>
+      <li>Cybersecurity</li>
+      <li>Security Monitoring</li>
+      <li>Incident Response</li>
+      <li>Threat Analysis</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <div class="certification">
+      <ul>
+        <li>Foundations of Cybersecurity</li>
+        <li>Networks and Network Security</li>
+        <li>Introduction to Internet of Things</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Enhanced Security Operations Center (SOC)</h3>
+      <p>Designed and implemented an Enhanced SOC with integrated SOAR, SIEM, and vulnerability management for automated workflows, real-time monitoring, and proactive threat remediation. Centralized diverse data sources to improve operational efficiency and strengthen security posture.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p>B.E. Electronics and Communication Engineering, Nandha Engineering College (2021-2025)</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      📞 +91 7550343336<br />
+      📧 <a href="mailto:Mhdnowfal03@gmail.com">Mhdnowfal03@gmail.com</a><br />
+      🔗 <a href="https://www.linkedin.com/in/mohamed-nowfal-">LinkedIn</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mohamed Nowfal</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
