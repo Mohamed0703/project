@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome | Mohamed Nowfal Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+    body, html {
+      margin: 0; padding: 0; height: 100%;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0d1b2a, #1d3557);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 20px;
+      animation: fadeInScale 1.2s ease forwards;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.3em;
+      animation: bounceIn 1.5s ease forwards;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 2em;
+      color: #a8c0ff;
+      font-weight: 400;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 30px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #0d1b2a;
+      background: #a8c0ff;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 6px 10px rgba(168, 192, 255, 0.6);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn:hover {
+      background: #5a7abf;
+      color: white;
+      box-shadow: 0 8px 15px rgba(90, 122, 191, 0.8);
+    }
+
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.85);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mohamed Nowfal</h1>
+    <p>Cybersecurity Enthusiast | Python  | SOC </p>
+    <a href="portfolio.html" class="btn">Enter Portfolio</a>
+	<a href="portfolio.html">
+
+  </div>
+</body>
+</html>
